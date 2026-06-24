@@ -37,6 +37,7 @@ body::before {
   z-index: -2;
 }
 
+/* تعديل النجوم عشان تتحرك فعلياً */
 body::after {
   content: '';
   position: fixed;
@@ -47,9 +48,11 @@ body::after {
     radial-gradient(2px 2px at 60% 70%, white, transparent),
     radial-gradient(1px 1px at 50% 50%, white, transparent),
     radial-gradient(1px 1px at 80% 10%, white, transparent),
-    radial-gradient(2px 2px at 30% 80%, white, transparent);
-  background-size: 200px 200px;
-  animation: twinkle 5s ease-in-out infinite;
+    radial-gradient(2px 2px at 30% 80%, white, transparent),
+    radial-gradient(1px 1px at 10% 90%, white, transparent),
+    radial-gradient(2px 2px at 90% 20%, white, transparent);
+  background-size: 200px 200px, 300px 300px, 150px 150px, 250px 250px, 180px 180px, 220px 220px, 280px 280px;
+  animation: twinkle 8s ease-in-out infinite, moveStars 60s linear infinite;
   z-index: -1;
   opacity: 0.6;
 }
@@ -57,6 +60,11 @@ body::after {
 @keyframes twinkle {
  0%, 100% { opacity: 0.3; }
  50% { opacity: 0.8; }
+}
+
+@keyframes moveStars {
+ 0% { background-position: 0 0, 0 0, 0 0, 0 0, 0 0, 0 0, 0 0; }
+ 100% { background-position: 200px 200px, -300px 300px, 150px -150px, -250px 250px, 180px 180px, -220px 220px, 280px -280px; }
 }
 
 .container { max-width: 600px; margin: 0 auto; padding: 20px; position: relative; z-index: 1; }
@@ -288,7 +296,7 @@ footer {
 </div>
 
 <div class="service-box">
-<h3>تحسين المتجر وSEO</h3>
+<h3>تحسين المتجر وانجهز له تصميم</h3>
 <p>نسرع متجرك ونرفعه بجوجل عشان تجيك زيارات ومبيعات اكثر</p>
 </div>
 
@@ -298,13 +306,13 @@ footer {
 <h2>آراء عملائنا</h2>
 
 <div class="testimonial-box">
-<p>⭐ خدمة ممتازة وسريعة، سووا لي متجر خلال يوم واحد</p>
-<p class="name">- احمد السبيعي</p>
+<p> خدمة ممتازة وسريعة، سووا لي متجر خلال يوم واحد</p>
+<p class="name">- لمسة عطر</p>
 </div>
 
 <div class="testimonial-box">
-<p>⭐ فريق محترف، ردوا من اول دقيقة وفهموا اللي ابغاه بالضبط</p>
-<p class="name">- سارة العتيبي</p>
+<p>فريق محترف، ردوا من اول دقيقة وفهموا اللي ابغاه بالضبط</p>
+<p class="name">- منتجات رقمية </p>
 </div>
 
 </div>
@@ -312,9 +320,10 @@ footer {
 <div class="contact-section">
 <div class="section">
 <h2>تواصل معنا</h2>
-<a href="https://wa.me/966579877386" class="btn">تواصل واتساب</a>
-<a href="https://www.instagram.com/sahel.sa.ksa" class="btn insta">انستقرام</a>
-<a href="https://tiktok.com/@sahel.sa.ksa" class="btn tiktok">تيك توك</a>
+<!-- الروابط حقتك هنا -->
+<a href="https://wa.me/message/JNBDL44RL4GQL1" target="_blank" class="btn">تواصل واتساب</a>
+<a href="https://www.instagram.com/sahel.sa.ksa?igsh=dGgxdWloZjBkOXQz&utm_source=qr" target="_blank" class="btn insta">انستقرام</a>
+<a href="https://www.tiktok.com/@sahel.sa.ksa" target="_blank" class="btn tiktok">تيك توك</a>
 </div>
 </div>
 
